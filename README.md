@@ -1,24 +1,9 @@
-# README
+# Rails app with React for the front-end
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a (Rails)[http://rubyonrails.org] app the uses (React)[https://facebook.github.io/react/] for the _V_ in the (MVC)[https://en.wikipedia.org/wiki/Model–view–controller] pattern.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Gems
+- (bootstrap-sass)[https://github.com/twbs/bootstrap-sass]
+- (better_errors)[https://github.com/charliesome/better_errors]
+- (hirb)[https://github.com/cldwalker/hirb]
+- (react-rails)[https://github.com/reactjs/react-rails]
