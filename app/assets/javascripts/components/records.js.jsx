@@ -12,6 +12,8 @@ var Records = React.createClass({
       <div className='records row'>
         <div className='col-xs-10 col-xs-offset-1'>
           <h2 className='title'>Records</h2>
+          <RecordForm handleNewRecord={this.addRecord} />
+          <hr />
           <table className='table table-bordered table-hover'>
             <thead>
               <tr>

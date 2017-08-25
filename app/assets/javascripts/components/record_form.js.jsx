@@ -1,10 +1,10 @@
 var RecordForm = React.createClass({
   getInitialState() {
-    return (
-      title: '',
-      date: '',
-      amount: ''
-    )
+    return ({
+      title: ' ',
+      date: ' ',
+      amount: ' '
+    })
   },
 
   handleChange(e) {
@@ -18,11 +18,21 @@ var RecordForm = React.createClass({
     return (this.state.title && this.state.date && this.state.amount);
   },
 
+  handleSubmit(e) {
+    e.preventDefault();
+    $.post('', { record: this.state }, function(data) {
+      this.props.handleNewRecord(data);
+      this.setState(this.getInitialState());
+      }.bind(this),
+      'JSON'
+    );
+  },
+
   render() {
     return (
       <form className='form-inline'>
         <div className='form-group'>
-          <input className='form-control' type='text' placeholder='Date' name='date' value={this.state.date} onChange={this.handleChange}></input>
+          <input className='form-control' type='text' placeholder='Date' name='date' value={this.state.date} onChange={this.handleChange} />
         </div>
         <div className='form-group'>
           <input className='form-control' type='text' placeholder='Title' name='title' value={this.state.title} onChange={this.handleChange}></input>
