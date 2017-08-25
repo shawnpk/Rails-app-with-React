@@ -1,9 +1,9 @@
 var RecordForm = React.createClass({
   getInitialState() {
     return ({
-      title: ' ',
-      date: ' ',
-      amount: ' '
+      title: '',
+      date: '',
+      amount: ''
     })
   },
 
