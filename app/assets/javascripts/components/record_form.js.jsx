@@ -14,6 +14,10 @@ var RecordForm = React.createClass({
     this.setState(obj);
   },
 
+  valid() {
+    return (this.state.title && this.state.date && this.state.amount);
+  },
+
   render() {
     return (
       <form className='form-inline'>
