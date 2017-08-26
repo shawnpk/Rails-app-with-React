@@ -20,17 +20,20 @@ var RecordForm = React.createClass({
 
   handleSubmit(e) {
     e.preventDefault();
-    $.post('', { record: this.state }, function(data) {
-      this.props.handleNewRecord(data);
-      this.setState(this.getInitialState());
+    $.post('',
+      { record: this.state },
+      function(data) {
+        this.props.handleNewRecord(data);
+        this.setState(this.getInitialState());
       }.bind(this),
       'JSON'
     );
+    console.log(e)
   },
 
   render() {
     return (
-      <form className='form-inline'>
+      <form className='form-inline' onSubmit={this.handleSubmit}>
         <div className='form-group'>
           <input className='form-control' type='text' placeholder='Date' name='date' value={this.state.date} onChange={this.handleChange} />
         </div>
